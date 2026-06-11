@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building a $0 Website With GitHub Pages | Zenvorau</title>
+  <meta name="description" content="A practical walkthrough for publishing a simple static website with GitHub Pages.">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #1d1f23;
+      --muted: #606873;
+      --line: #d9d5cc;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warm: #b45309;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fffdf8;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    main {
+      padding: 48px 0 64px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-top: 36px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    p,
+    li {
+      font-size: 18px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 21px;
+    }
+
+    .note {
+      margin: 28px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--warm);
+      background: #fff8ed;
+      color: #4a3420;
+    }
+
+    .panel {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #ebe7dc;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.95em;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Zenvorau</div>
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">Guide</p>
+    <h1>Building a $0 Website With GitHub Pages</h1>
+    <p class="lead">
+      This is a simple way to publish a static website without paying for hosting at the start.
+    </p>
+
+    <div class="note">
+      This guide is based on a real setup completed on June 11, 2026. Platform rules can change, so check current terms before relying on any service long term.
+    </div>
+
+    <h2>What You Need</h2>
+    <ul>
+      <li>A GitHub account</li>
+      <li>A public repository named like <code>yourusername.github.io</code></li>
+      <li>An <code>index.html</code> file</li>
+      <li>Basic text for the homepage</li>
+    </ul>
+
+    <h2>Why GitHub Pages Works for This</h2>
+    <p>
+      GitHub Pages is made for static websites. That means it can publish files like HTML, CSS, and JavaScript directly from a GitHub repository.
+    </p>
+    <p>
+      For a GitHub Free account, GitHub Pages is available for public repositories. That is why this setup can start at $0/month without buying hosting.
+    </p>
+
+    <h2>The Basic Setup</h2>
+    <ol>
+      <li>Create a GitHub repository named <code>yourusername.github.io</code>.</li>
+      <li>Set the repository to public.</li>
+      <li>Add a file named <code>index.html</code>.</li>
+      <li>Put your homepage HTML inside that file.</li>
+      <li>Commit the change to the <code>main</code> branch.</li>
+      <li>Wait for GitHub Pages to publish the site.</li>
+    </ol>
+
+    <div class="panel">
+      <p>
+        Example site URL:
+        <br>
+        <code>https://yourusername.github.io</code>
+      </p>
+    </div>
+
+    <h2>What This Setup Can Do</h2>
+    <p>
+      A GitHub Pages site can host a homepage, blog posts, landing pages, documentation, and simple JavaScript tools.
+    </p>
+    <p>
+      It is a good starting point for a low-cost content site because the files are simple, public, and easy to update.
+    </p>
+
+    <h2>What It Cannot Do by Itself</h2>
+    <p>
+      GitHub Pages does not run backend code like PHP, Ruby, or Python. It is not a full server. If a project needs login systems, databases, payments, or AI agents running in the background, those pieces need separate tools.
+    </p>
+
+    <h2>How Long Publishing Can Take</h2>
+    <p>
+      GitHub says Pages changes can take up to 10 minutes to publish after pushing changes. In practice, small edits often appear faster, but waiting a few minutes is normal.
+    </p>
+
+    <h2>Why This Is a Good First Step</h2>
+    <p>
+      The goal is not to build a perfect business on day one. The goal is to create a real public site, connect a newsletter, and start publishing useful posts.
+    </p>
+    <p>
+      Once the site has content, it can later be improved with better design, search pages, email capture, analytics, affiliate disclosures, and automation.
+    </p>
+
+    <h2>Sources Checked</h2>
+    <ul>
+      <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Docs: What is GitHub Pages?</a></li>
+      <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub Docs: Creating a GitHub Pages site</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Zenvorau. Last updated: June 11, 2026.
+    </div>
+  </footer>
+</body>
+</html>
