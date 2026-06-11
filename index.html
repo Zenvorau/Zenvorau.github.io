@@ -4,9 +4,300 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zenvorau</title>
+  <meta name="description" content="Practical guides about AI tools, productivity experiments, and low-cost digital systems.">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #1d1f23;
+      --muted: #606873;
+      --line: #d9d5cc;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warm: #b45309;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fffdf8;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 56px 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      max-width: 760px;
+      font-size: clamp(38px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 0 0 24px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .panel h2,
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .panel p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 44px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .post {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tag {
+      width: fit-content;
+      margin-bottom: 14px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e7f5f2;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .post h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .post p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--warm);
+      background: #fff8ed;
+      color: #4a3420;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 36px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Zenvorau</h1>
-  <p>AI tools, productivity experiments, and practical guides.</p>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Zenvorau</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#posts">Posts</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#disclosure">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Practical AI tools and low-cost digital systems.</h1>
+        <p class="lead">
+          Zenvorau tracks useful AI tools, simple automation ideas, and productivity experiments that can be tested without a large budget.
+        </p>
+        <div class="actions">
+          <a class="button" href="#posts">Read planned posts</a>
+          <a class="button secondary" href="#newsletter">Newsletter coming soon</a>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <h2>Current Focus</h2>
+        <p>Free and low-cost AI tools for students, freelancers, creators, and small online projects.</p>
+        <p>No gambling, adult content, scams, or medical and financial claims.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="posts">
+      <h2>Planned Posts</h2>
+      <div class="grid">
+        <article class="post">
+          <div>
+            <div class="tag">Guide</div>
+            <h3>Building a $0 Website With GitHub Pages</h3>
+            <p>A simple walkthrough for publishing a static website without paid hosting.</p>
+          </div>
+          <a href="#">Draft planned</a>
+        </article>
+
+        <article class="post">
+          <div>
+            <div class="tag">AI Tools</div>
+            <h3>A Beginner AI Toolkit With Free Tiers</h3>
+            <p>A tracked list of useful tools, with notes on limits, pricing, and realistic use cases.</p>
+          </div>
+          <a href="#">Draft planned</a>
+        </article>
+
+        <article class="post">
+          <div>
+            <div class="tag">Automation</div>
+            <h3>Simple Weekly Content Automation</h3>
+            <p>A low-risk system for researching ideas, drafting posts, and reviewing them before publishing.</p>
+          </div>
+          <a href="#">Draft planned</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel" id="newsletter">
+      <h2>Newsletter</h2>
+      <p>
+        The newsletter is not active yet. When it is ready, this section will link to the signup page.
+      </p>
+    </section>
+
+    <section class="section" id="disclosure">
+      <h2>Disclosure</h2>
+      <div class="note">
+        Some future links may be affiliate links. If affiliate links are added, they will be marked clearly. Content should be checked before publishing, especially pricing, product limits, and legal or money-related claims.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Last updated: June 2026. Built with GitHub Pages.
+    </div>
+  </footer>
 </body>
 </html>
