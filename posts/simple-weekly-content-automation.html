@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Weekly Content Automation | Zenvorau</title>
+  <meta name="description" content="A low-risk weekly workflow for researching, drafting, reviewing, and publishing useful content.">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #1d1f23;
+      --muted: #606873;
+      --line: #d9d5cc;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warm: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fffdf8;
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    main { padding: 48px 0 64px; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-top: 36px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    p, li { font-size: 18px; }
+    .lead {
+      color: var(--muted);
+      font-size: 21px;
+    }
+    .note {
+      margin: 28px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--warm);
+      background: #fff8ed;
+      color: #4a3420;
+    }
+    .step {
+      margin: 18px 0;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .step p { margin: 8px 0 0; }
+    code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #ebe7dc;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.95em;
+    }
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Zenvorau</div>
+      <a href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">Automation</p>
+    <h1>Simple Weekly Content Automation</h1>
+    <p class="lead">
+      A low-risk system for researching ideas, drafting posts, reviewing claims, and publishing useful content.
+    </p>
+
+    <div class="note">
+      This is a workflow, not a money guarantee. The goal is to reduce repeated manual work while keeping human review for anything factual, legal, financial, or promotional.
+    </div>
+
+    <h2>The Weekly Loop</h2>
+
+    <section class="step">
+      <h3>1. Collect Ideas</h3>
+      <p>
+        Keep a running list of article ideas in a simple document, Notion page, spreadsheet, or GitHub file.
+      </p>
+      <p>
+        Example idea format: <code>topic / audience / why it matters / source links</code>
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>2. Pick One Useful Topic</h3>
+      <p>
+        Choose one topic that is practical, low-risk, and easy to explain. Avoid topics that require expert legal, medical, or financial advice.
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>3. Gather Sources</h3>
+      <p>
+        Before drafting, collect official pages or primary sources. For tool pricing and product limits, use official pricing or documentation pages whenever possible.
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>4. Draft the Article</h3>
+      <p>
+        Use AI to create a first draft, but treat it as a draft only. The draft should be checked for spelling, broken links, outdated details, and unsupported claims.
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>5. Review Risky Claims</h3>
+      <p>
+        Slow down on claims about price, laws, health, finance, safety, platform rules, or guarantees. Either verify them or remove them.
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>6. Publish</h3>
+      <p>
+        Add the article as an HTML file in the <code>posts</code> folder, then link to it from the homepage.
+      </p>
+    </section>
+
+    <section class="step">
+      <h3>7. Send or Save a Newsletter Note</h3>
+      <p>
+        If the article is useful, turn it into a short newsletter. If the newsletter is not ready yet, save the summary for later.
+      </p>
+    </section>
+
+    <h2>A Simple Schedule</h2>
+    <ul>
+      <li>Monday: collect ideas</li>
+      <li>Tuesday: choose one topic and gather sources</li>
+      <li>Wednesday: draft</li>
+      <li>Thursday: review and edit</li>
+      <li>Friday: publish and update homepage links</li>
+    </ul>
+
+    <h2>What Can Be Automated Later</h2>
+    <ul>
+      <li>Creating draft files from templates</li>
+      <li>Checking links</li>
+      <li>Listing posts automatically on the homepage</li>
+      <li>Creating a weekly newsletter draft</li>
+      <li>Running a scheduled GitHub Action to prepare draft ideas</li>
+    </ul>
+
+    <h2>What Should Stay Manual</h2>
+    <ul>
+      <li>Approving final factual claims</li>
+      <li>Approving affiliate links or money-related wording</li>
+      <li>Checking that sources are current</li>
+      <li>Making sure the article is useful, not spam</li>
+    </ul>
+
+    <h2>The Main Rule</h2>
+    <p>
+      Automate the repetitive parts. Review the parts where mistakes would matter.
+    </p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Zenvorau. Last updated: June 11, 2026.
+    </div>
+  </footer>
+</body>
+</html>
